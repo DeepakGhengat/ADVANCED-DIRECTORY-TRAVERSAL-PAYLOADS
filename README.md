@@ -564,12 +564,7 @@ done
 - Educational lab environments (DVWA, WebGoat, HackTheBox)
 - Personal test systems
 
-### Prohibited Uses
-- ❌ Unauthorized access to systems
-- ❌ Testing without explicit permission
-- ❌ DoS attacks or destructive actions
-- ❌ Mass scanning of non-consenting targets
-- ❌ Malicious exploitation
+### Prohibited Use
 
 **Violation may result in criminal prosecution under CFAA (USA), Computer Misuse Act (UK), or equivalent laws.**
 
