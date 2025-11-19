@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains **1,470+ battle-tested directory traversal payloads** aggregated from the world's best security research. These payloads are sourced from:
+This repository contains **1,600+ battle-tested directory traversal payloads** aggregated from the world's best security research. These payloads are sourced from:
 - **PayloadsAllTheThings** (swisskyrepo) - Most comprehensive public collection
 - **FuzzDB** (fuzzdb-project) - Attack primitives database
 - **SecLists** (danielmiessler) - Security tester's companion
@@ -17,15 +17,18 @@ This repository contains **1,470+ battle-tested directory traversal payloads** a
 
 ## What's Included
 
-### `payloads.txt` - 1,470+ Ready-to-Use Payloads
+### `payloads.txt` - 1,600+ Ready-to-Use Payloads
 
-One clean file, no comments, ready for immediate fuzzing. **Aggregated from top GitHub repositories:**
+One clean file, no comments, ready for immediate fuzzing. **Aggregated from top GitHub repositories and security research:**
 
 **Sources:**
 - [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) - Directory traversal & dotdotpwn wordlists
 - [FuzzDB](https://github.com/fuzzdb-project/fuzzdb) - Path traversal attack payloads
 - [SecLists](https://github.com/danielmiessler/SecLists) - LFI-Jhaddix, LFI-LFISuite, and Linux-specific payloads
 - [wfuzz](https://github.com/xmendez/wfuzz) - 847 attack vectors with deep recursion
+- **Bug Bounty Research** - 2024/2025 encoding obfuscation techniques
+- **YesWeHack** - Advanced filter bypass methods
+- **Security StackExchange** - Community-verified encoding tricks
 
 **Payload Categories:**
 - **Basic traversal**: Multiple depth patterns (1-30 levels)
@@ -39,6 +42,9 @@ One clean file, no comments, ready for immediate fuzzing. **Aggregated from top 
 - **2025 techniques**: CloudFlare bypasses, parsing discrepancies
 - **Cloud metadata**: AWS, GCP, Azure service exploitation
 - **Container escapes**: Docker, Kubernetes paths
+- **🔥 Advanced encoding obfuscation**: Overlong UTF-8 (`%c0%ae`, `%c0%af`, `%c0%2e`), mixed encoding layers
+- **🔥 Recursive filter bypasses**: `....//`, `..../\`, nested encoding to survive sanitization
+- **🔥 Multi-layer decoding**: Payloads designed for Nginx→Node→Python chains
 
 ---
 
@@ -645,10 +651,10 @@ Contributions welcome for:
 
 ## 📊 Statistics
 
-- **870+ payloads** ready for fuzzing
-- **Aggregated from 4 major GitHub repositories**
-- **10+ WAF bypass categories**
-- **2025 latest techniques** included
+- **1,600+ payloads** ready for fuzzing
+- **Aggregated from 4 major GitHub repositories + advanced encoding research**
+- **13+ WAF bypass categories** (including advanced obfuscation)
+- **2025 latest techniques** included (overlong UTF-8, recursive bypasses)
 - **Zero configuration** required
 - **Platform tested** across CloudFlare, Imperva, F5, ModSecurity, AWS, Azure
 - **Public domain** - All payloads from open-source security research
@@ -734,8 +740,10 @@ Massive thanks to the security research community:
 
 ## Version
 
-**v3.0** - Updated November 2025
-- Added 195+ new payloads from public GitHub repositories
+**v4.0** - Updated November 2025
+- Added 738+ new payloads from public GitHub repositories and encoding research
 - Aggregated PayloadsAllTheThings, FuzzDB, SecLists, wfuzz
-- Included latest 2025 WAF bypass research
-- Total: 870+ production-ready payloads
+- **NEW: 137 advanced encoding obfuscation payloads** (overlong UTF-8, recursive bypasses)
+- **NEW: Multi-layer decoding chains** for complex application stacks
+- Included latest 2025 WAF bypass research (YesWeHack, StackExchange, bug bounty reports)
+- Total: 1,600+ production-ready payloads
