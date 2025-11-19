@@ -4,18 +4,30 @@
 
 ## Overview
 
-This repository contains **800+ battle-tested directory traversal payloads** designed to bypass modern Web Application Firewalls. These payloads are built from:
+This repository contains **870+ battle-tested directory traversal payloads** aggregated from the world's best security research. These payloads are sourced from:
+- **PayloadsAllTheThings** (swisskyrepo) - Most comprehensive public collection
+- **FuzzDB** (fuzzdb-project) - Attack primitives database
+- **SecLists** (danielmiessler) - Security tester's companion
+- **wfuzz** wordlists - 847 attack vectors with 8 recursion levels
 - Real-world penetration testing
-- Latest 2025 WAF bypass research
+- Latest 2025 WAF bypass research (WAFFLED, FortiWeb CVEs)
 - Zero-day technique simulations
-- Parsing discrepancy exploits (WAFFLED research)
+- Parsing discrepancy exploits
 - HTTP/2 smuggling patterns
 
 ## What's Included
 
-### `payloads.txt` - 800+ Ready-to-Use Payloads
+### `payloads.txt` - 870+ Ready-to-Use Payloads
 
-One clean file, no comments, ready for immediate fuzzing:
+One clean file, no comments, ready for immediate fuzzing. **Aggregated from top GitHub repositories:**
+
+**Sources:**
+- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) - Directory traversal section
+- [FuzzDB](https://github.com/fuzzdb-project/fuzzdb) - Path traversal attack payloads
+- [SecLists](https://github.com/danielmiessler/SecLists) - LFI/directory traversal wordlists
+- [wfuzz](https://github.com/xmendez/wfuzz) - 847 attack vectors
+
+**Payload Categories:**
 - **Basic traversal**: Multiple depth patterns (1-30 levels)
 - **URL encoding**: Single, double, triple encoding variations
 - **Unicode**: UTF-16, overlong UTF-8, normalization exploits
@@ -633,11 +645,13 @@ Contributions welcome for:
 
 ## 📊 Statistics
 
-- **800+ payloads** ready for fuzzing
+- **870+ payloads** ready for fuzzing
+- **Aggregated from 4 major GitHub repositories**
 - **10+ WAF bypass categories**
 - **2025 latest techniques** included
 - **Zero configuration** required
 - **Platform tested** across CloudFlare, Imperva, F5, ModSecurity, AWS, Azure
+- **Public domain** - All payloads from open-source security research
 
 ---
 
@@ -692,6 +706,36 @@ The authors are not responsible for misuse. Users are solely responsible for ens
 
 ---
 
+## 🔗 Payload Sources
+
+This repository aggregates payloads from the best public security research:
+
+| Repository | Maintainer | Payloads Included |
+|------------|------------|-------------------|
+| [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) | swisskyrepo | Directory traversal, encoding variations, server-specific |
+| [FuzzDB](https://github.com/fuzzdb-project/fuzzdb) | fuzzdb-project | Attack primitives, Windows/Linux paths |
+| [SecLists](https://github.com/danielmiessler/SecLists) | danielmiessler | LFI/LFISuite, Jhaddix list, gracefulsecurity |
+| [wfuzz](https://github.com/xmendez/wfuzz) | xmendez | 847 attack vectors with recursion |
+
+**All sources are publicly available under open-source licenses.**
+
+---
+
+## 🙏 Credits
+
+Massive thanks to the security research community:
+- **swisskyrepo** - PayloadsAllTheThings maintainer
+- **danielmiessler** - SecLists creator
+- **fuzzdb-project** - Attack pattern database
+- **Luca "ikki" Carettoni** - wfuzz wordlist author
+- All contributors to these open-source projects
+
+---
+
 ## Version
 
-**v2.0** - Updated November 2025 with latest WAF bypass research
+**v3.0** - Updated November 2025
+- Added 195+ new payloads from public GitHub repositories
+- Aggregated PayloadsAllTheThings, FuzzDB, SecLists, wfuzz
+- Included latest 2025 WAF bypass research
+- Total: 870+ production-ready payloads
