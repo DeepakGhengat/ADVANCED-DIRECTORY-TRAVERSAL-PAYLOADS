@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains **870+ battle-tested directory traversal payloads** aggregated from the world's best security research. These payloads are sourced from:
+This repository contains **1,470+ battle-tested directory traversal payloads** aggregated from the world's best security research. These payloads are sourced from:
 - **PayloadsAllTheThings** (swisskyrepo) - Most comprehensive public collection
 - **FuzzDB** (fuzzdb-project) - Attack primitives database
 - **SecLists** (danielmiessler) - Security tester's companion
@@ -17,15 +17,15 @@ This repository contains **870+ battle-tested directory traversal payloads** agg
 
 ## What's Included
 
-### `payloads.txt` - 870+ Ready-to-Use Payloads
+### `payloads.txt` - 1,470+ Ready-to-Use Payloads
 
 One clean file, no comments, ready for immediate fuzzing. **Aggregated from top GitHub repositories:**
 
 **Sources:**
-- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) - Directory traversal section
+- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) - Directory traversal & dotdotpwn wordlists
 - [FuzzDB](https://github.com/fuzzdb-project/fuzzdb) - Path traversal attack payloads
-- [SecLists](https://github.com/danielmiessler/SecLists) - LFI/directory traversal wordlists
-- [wfuzz](https://github.com/xmendez/wfuzz) - 847 attack vectors
+- [SecLists](https://github.com/danielmiessler/SecLists) - LFI-Jhaddix, LFI-LFISuite, and Linux-specific payloads
+- [wfuzz](https://github.com/xmendez/wfuzz) - 847 attack vectors with deep recursion
 
 **Payload Categories:**
 - **Basic traversal**: Multiple depth patterns (1-30 levels)
