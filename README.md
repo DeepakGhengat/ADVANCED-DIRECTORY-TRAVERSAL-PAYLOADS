@@ -58,7 +58,7 @@ cat payloads.txt | parallel -j 50 'curl -s "https://target.com/api?file={}" | gr
 
 ---
 
-## 💡 2025 WAF Bypass Techniques
+##💡 2025 WAF Bypass Techniques
 
 ### CloudFlare Bypass
 ```bash
