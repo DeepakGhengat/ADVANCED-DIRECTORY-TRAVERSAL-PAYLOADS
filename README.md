@@ -2,8 +2,7 @@
 
 **The ultimate collection for bypassing WAFs in 2025** - CloudFlare, Imperva, F5, ModSecurity, AWS WAF, Azure WAF, and more.
 
-- [💡 2025 WAF Bypass Techniques](#WAF Bypass Techniques)
-
+- [💡 2025 WAF Bypass Techniques](#💡-2025-WAF-Bypass-Techniques)
 ---
 
 ## Overview
